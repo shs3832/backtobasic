@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+
+.card-section__title {
+  font-size: 24px;
+  line-height: 1.3;
+}
+.card-section__desc {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+}
+.card__badge {
+  color: #2563eb;
+  background-color: #dbeafe;
+}
+.card__image {
+  margin-bottom: 24px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__title {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+.card__actions {
+  margin-top: 20px;
+}
+.card__actions a,
+.card__actions button {
+  font-size: 14px;
+}
+.card__link:focus-visible, .card__favorite:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .card__link:hover {
+    color: #0f172a;
+  }
+  .card__favorite:hover {
+    color: #2563eb;
+    background-color: #dbeafe;
+    border-color: #2563eb;
+  }
+}/*# sourceMappingURL=style.min.css.map */

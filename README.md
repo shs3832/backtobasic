@@ -51,24 +51,32 @@ Part 6. 리뷰, 면접 답변, React 전환 관점 정리
 ```txt
 backtobasic/
 ├─ README.md
-└─ study01/
+├─ study01/
+│  ├─ goal.md
+│  ├─ study-summary.md
+│  └─ responsive-card-list/
+│     └─ index.html
+└─ study02/
    ├─ goal.md
    ├─ study-summary.md
    └─ responsive-card-list/
-      └─ index.html
+      ├─ index.html
+      ├─ scss/
+      └─ css/
 ```
 
 ## 스터디 목록
 
 | Study | 주제 | 상태 | 정리 |
 | --- | --- | --- | --- |
-| study01 | 반응형 카드 리스트 - HTML 마크업 | 진행 중 | [study-summary.md](./study01/study-summary.md) |
+| study01 | 반응형 카드 리스트 - HTML 마크업 | 완료 | [study-summary.md](./study01/study-summary.md) |
+| study02 | 반응형 카드 리스트 - SCSS/CSS | 진행 중 | [study-summary.md](./study02/study-summary.md) |
 
 ## Study 01 - 반응형 카드 리스트
 
 첫 번째 과제는 반응형 카드 리스트입니다.
 
-현재는 Part 1로 HTML 마크업을 중심으로 진행했습니다.
+Part 1로 HTML 마크업을 중심으로 진행했습니다.
 
 학습한 핵심 내용:
 
@@ -79,12 +87,26 @@ backtobasic/
 - 링크와 버튼의 역할 차이
 - BEM 느낌의 클래스명과 유지보수성
 
+## Study 02 - 반응형 카드 리스트 SCSS/CSS
+
+Part 2로 SCSS 구조와 반응형 카드 리스트 스타일을 진행했습니다.
+
+학습한 핵심 내용:
+
+- SCSS `@use` 순서와 reset/component 출력 순서
+- `_variables`, `_mixins`, `_reset`, `_card` 파일 역할 분리
+- CSS Grid의 `repeat`, `minmax`, `fr`, `gap`
+- desktop-first와 mobile-first 미디어쿼리 차이
+- `aspect-ratio`, `object-fit: cover`, `display: block`
+- `line-clamp`를 이용한 제목/설명 2줄 제한
+- `@media (hover: hover)`와 `focus-visible`
+- `prefers-reduced-motion` 사용 기준
+
 다음 단계:
 
-- SCSS/CSS 기본 구조 작성
-- CSS Grid 기반 반응형 카드 리스트 구현
-- 이미지 영역 `aspect-ratio: 16 / 9` 처리
-- hover, focus-visible, reduced motion 대응
+- vanilla JavaScript로 찜하기 토글 기능 구현
+- 이벤트 위임 방식 적용
+- `aria-pressed`와 `aria-label` 상태 동기화
 
 ## 앞으로 추가할 과제 후보
 
