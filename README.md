@@ -56,13 +56,21 @@ backtobasic/
 │  ├─ study-summary.md
 │  └─ responsive-card-list/
 │     └─ index.html
-└─ study02/
+├─ study02/
+│  ├─ goal.md
+│  ├─ study-summary.md
+│  └─ responsive-card-list/
+│     ├─ index.html
+│     ├─ scss/
+│     └─ css/
+└─ study03/
    ├─ goal.md
    ├─ study-summary.md
    └─ responsive-card-list/
       ├─ index.html
       ├─ scss/
-      └─ css/
+      ├─ css/
+      └─ js/
 ```
 
 ## 스터디 목록
@@ -70,7 +78,8 @@ backtobasic/
 | Study | 주제 | 상태 | 정리 |
 | --- | --- | --- | --- |
 | study01 | 반응형 카드 리스트 - HTML 마크업 | 완료 | [study-summary.md](./study01/study-summary.md) |
-| study02 | 반응형 카드 리스트 - SCSS/CSS | 진행 중 | [study-summary.md](./study02/study-summary.md) |
+| study02 | 반응형 카드 리스트 - SCSS/CSS | 완료 | [study-summary.md](./study02/study-summary.md) |
+| study03 | 반응형 카드 리스트 - JavaScript 인터랙션 | 완료 | [study-summary.md](./study03/study-summary.md) |
 
 ## Study 01 - 반응형 카드 리스트
 
@@ -102,11 +111,25 @@ Part 2로 SCSS 구조와 반응형 카드 리스트 스타일을 진행했습니
 - `@media (hover: hover)`와 `focus-visible`
 - `prefers-reduced-motion` 사용 기준
 
+## Study 03 - 반응형 카드 리스트 JavaScript 인터랙션
+
+Part 3으로 vanilla JavaScript를 사용해 찜하기 토글 기능을 구현했습니다.
+
+학습한 핵심 내용:
+
+- `DOMContentLoaded`와 `window.onload` 차이
+- 이벤트 위임 방식
+- `event.target`과 `closest`
+- DOM이 없을 때 에러를 막는 방어 코드
+- `getAttribute`로 읽은 문자열 상태를 boolean으로 변환하는 방식
+- `aria-pressed`, `aria-label`, `textContent`, `classList` 동기화
+- React의 state 기반 사고와 vanilla JS의 직접 DOM 갱신 차이
+
 다음 단계:
 
-- vanilla JavaScript로 찜하기 토글 기능 구현
-- 이벤트 위임 방식 적용
-- `aria-pressed`와 `aria-label` 상태 동기화
+- 카드 리스트 과제 최종 리뷰
+- 면접 답변 정리
+- React 전환 관점 정리
 
 ## 앞으로 추가할 과제 후보
 
