@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>responsive tab - HTML</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>UI 탭 학습</h1>
+      <section class="tab-section" aria-labelledby="tabs-section__title">
+        <h2 class="tabs-section__title" id="tabs-section__title">UI 기본기 탭</h2>
+        <p>실무 UI 구현에서 자주 쓰는 기본 개념을 확인합니다.</p>
+        <div class="tabs">
+          <div class="tabs__list" role="tablist" aria-labelledby="tabs-section__title">
+            <button id="tab-html" type="button" role="tab" aria-selected="true" aria-controls="panel-html">HTML</button>
+            <button id="tab-css" type="button" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+            <button id="tab-javascript" type="button" role="tab" aria-selected="false" aria-controls="panel-javascript">
+              JavaScript
+            </button>
+          </div>
+          <div class="tabs__panels">
+            <div class="tabs__panel" aria-labelledby="tab-html" id="panel-html" role="tabpanel">
+              <h3>html 패널</h3>
+              <p>콘텐츠의 의미와 구조를 HTML 태그로</p>
+            </div>
+            <div class="tabs__panel" aria-labelledby="tab-css" id="panel-css" hidden role="tabpanel">
+              <h3>css 패널</h3>
+              <p>화면 크기와 상태에 따라 레이아웃과 스타일을 조정합니다.</p>
+            </div>
+            <div class="tabs__panel" aria-labelledby="tab-javascript" id="panel-javascript" hidden role="tabpanel">
+              <h3>JavaScript 패널</h3>
+              <p>사용자의 클릭이나 키보드 입력에 따라 탭의 선택 상태를 변경합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
