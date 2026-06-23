@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ 아코디언 학습</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>FAQ 아코디언 학습</h1>
+      <section class="accordion-section" aria-labelledby="accordion-section__title">
+        <h2 class="accordion-section__title" id="accordion-section__title">자주 묻는 질문</h2>
+        <p class="accordion-section__description">실무 UI 구현에서 자주 사용하는 아코디언 패턴을 학습합니다.</p>
+        <ul class="accordion">
+          <li class="accordion__item">
+            <button
+              type="button"
+              class="accordion__button"
+              id="accordion-question-1"
+              aria-expanded="false"
+              aria-controls="accordion-panel-1"
+            >
+              HTML 구조는 왜 중요한가요?
+            </button>
+            <div
+              class="accordion__panel"
+              id="accordion-panel-1"
+              role="region"
+              aria-labelledby="accordion-question-1"
+              hidden
+            >
+              <p>HTML은 콘텐츠의 의미와 구조를 담당합니다.</p>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              class="accordion__button"
+              id="accordion-question-2"
+              aria-expanded="false"
+              aria-controls="accordion-panel-2"
+            >
+              CSS는 어떤 역할을 하나요?
+            </button>
+            <div
+              class="accordion__panel"
+              id="accordion-panel-2"
+              role="region"
+              aria-labelledby="accordion-question-2"
+              hidden
+            >
+              <p>CSS는 콘텐츠를 보기 좋게 배치하고, 화면 크기에 따라 레이아웃을 조정합니다.</p>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              class="accordion__button"
+              id="accordion-question-3"
+              aria-expanded="false"
+              aria-controls="accordion-panel-3"
+            >
+              JavaScript는 언제 사용하나요?
+            </button>
+            <div
+              class="accordion__panel"
+              id="accordion-panel-3"
+              role="region"
+              aria-labelledby="accordion-question-3"
+              hidden
+            >
+              <p>JavaScript는 사용자의 클릭, 입력, 키보드 조작에 따라 UI 상태를 변경할 때 사용합니다.</p>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              class="accordion__button"
+              id="accordion-question-4"
+              aria-expanded="false"
+              aria-controls="accordion-panel-4"
+            >
+              접근성 속성은 왜 필요한가요?
+            </button>
+            <div
+              class="accordion__panel"
+              id="accordion-panel-4"
+              role="region"
+              aria-labelledby="accordion-question-4"
+              hidden
+            >
+              <p>접근성 속성은 보조기술이 UI의 상태와 관계를 이해할 수 있도록 돕습니다.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

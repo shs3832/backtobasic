@@ -1,0 +1,84 @@
+@use "_variables" as *;
+.tabs-section {
+  &__title {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-text;
+    text-align: center;
+  }
+}
+
+.tabs {
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__button {
+    padding: 10px 16px;
+    border: 1px solid $color-border;
+    background: #f3f4f6;
+    color: $color-text;
+    border-radius: 8px 8px 0 0;
+    width: 33.33%;
+    flex: 1 1 0;
+    @media screen and (max-width: 768px) {
+      flex: 1 1 50%;
+    }
+    &[aria-selected="true"] {
+      background: $color-primary;
+      color: #ffffff;
+      border-color: $color-primary;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+
+  &__panel {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    padding: 24px;
+    min-height: 220px;
+    margin-top: -1px;
+  }
+}
+
+.panel {
+  &__title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-text;
+  }
+}
+
+@media (hover: hover) {
+  .tabs {
+    &__button {
+      &:not([aria-selected="true"]):hover {
+        background: #e5e7eb;
+      }
+      &[aria-selected="true"]:hover {
+        background: #1d4ed8;
+      }
+    }
+  }
+}

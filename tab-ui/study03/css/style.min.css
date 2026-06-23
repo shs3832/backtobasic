@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: #f9fafb;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.tabs-section__title {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: center;
+}
+.tabs-section__description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #334155;
+  text-align: center;
+}
+
+.tabs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 32px;
+}
+@media screen and (max-width: 768px) {
+  .tabs__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.tabs__button {
+  padding: 10px 16px;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  color: #334155;
+  border-radius: 8px 8px 0 0;
+  width: 33.33%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+@media screen and (max-width: 768px) {
+  .tabs__button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+}
+.tabs__button[aria-selected=true] {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+.tabs__button:focus-visible {
+  outline: 1px solid #2563eb;
+  outline-offset: 2px;
+}
+.tabs__panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  min-height: 220px;
+  margin-top: -1px;
+}
+
+.panel__title {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.panel__description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #334155;
+}
+
+@media (hover: hover) {
+  .tabs__button:not([aria-selected=true]):hover {
+    background: #e5e7eb;
+  }
+  .tabs__button[aria-selected=true]:hover {
+    background: #1d4ed8;
+  }
+}/*# sourceMappingURL=style.min.css.map */

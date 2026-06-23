@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+
+.accordion-section__title {
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+}
+.accordion-section__description {
+  margin-top: 8px;
+  color: #334155;
+  text-align: center;
+}
+
+.accordion {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+.accordion__item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+.accordion__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 18px 20px;
+  color: #0f172a;
+  font-weight: 600;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .accordion__button {
+    min-height: 48px;
+    padding: 16px;
+  }
+}
+.accordion__button:after {
+  content: "+";
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .accordion__button:after {
+    margin-left: 12px;
+  }
+}
+.accordion__button[aria-expanded=true] {
+  color: #2563eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+.accordion__button[aria-expanded=true]::after {
+  content: "-";
+}
+.accordion__button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+.accordion__panel {
+  padding: 0 20px 20px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+@media (hover: hover) {
+  .accordion__button:not([aria-expanded=true]):hover {
+    background-color: #dbeafe;
+  }
+}/*# sourceMappingURL=style.min.css.map */
