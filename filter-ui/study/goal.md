@@ -42,7 +42,7 @@ SCSS, CSS, JavaScript는 다음 파트에서 작성한다.
 [초기화]
 
 [결과]
-총 6개
+총 3개
 
 - 반응형 카드 리스트
 - 탭 UI
@@ -100,7 +100,8 @@ select로 작성한다.
 
 ## 더미 데이터
 
-결과 목록은 최소 6개 이상 작성한다.
+Part 1에서는 필터 조건 차이가 보이도록 결과 목록을 최소 3개 이상 작성한다.
+JavaScript 필터링 파트에서 필요하면 6개 이상으로 확장한다.
 
 ```txt
 1.
@@ -192,7 +193,7 @@ select로 작성한다.
     </form>
 
     <div class="filter-result">
-      <p class="filter-result__count">총 6개</p>
+      <p class="filter-result__count">총 3개</p>
 
       <ul class="result-list">
         <li class="result-list__item">

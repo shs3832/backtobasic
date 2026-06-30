@@ -19,87 +19,92 @@
           <form class="filter__wrapper">
             <fieldset>
               <legend>카테고리 체크박스</legend>
+              <div class="filter__options">
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="category-html"
+                    name="category"
+                    value="html"
+                  />
+                  <label for="category-html"> HTML </label>
+                </div>
 
-              <div class="checkbox">
-                <label for="category-html"> HTML </label>
-                <input
-                  type="checkbox"
-                  id="category-html"
-                  name="category"
-                  value="html"
-                />
-              </div>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="category-css"
+                    name="category"
+                    value="css"
+                  />
+                  <label for="category-css"> CSS </label>
+                </div>
 
-              <div class="checkbox">
-                <label for="category-css"> CSS </label>
-                <input
-                  type="checkbox"
-                  id="category-css"
-                  name="category"
-                  value="css"
-                />
-              </div>
-
-              <div class="checkbox">
-                <label for="category-javascript"> JavaScript </label>
-                <input
-                  type="checkbox"
-                  id="category-javascript"
-                  name="category"
-                  value="javascript"
-                />
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="category-javascript"
+                    name="category"
+                    value="javascript"
+                  />
+                  <label for="category-javascript"> JavaScript </label>
+                </div>
               </div>
             </fieldset>
 
             <fieldset>
               <legend>난이도 라디오 버튼</legend>
-              <div class="radio">
-                <label for="level-all"> 전체 </label>
-                <input
-                  type="radio"
-                  id="level-all"
-                  name="level"
-                  value="all"
-                  checked
-                />
-              </div>
-              <div class="radio">
-                <label for="level-basic"> 기본 </label>
-                <input
-                  type="radio"
-                  id="level-basic"
-                  name="level"
-                  value="basic"
-                />
-              </div>
-              <div class="radio">
-                <label for="level-advanced"> 심화 </label>
-                <input
-                  type="radio"
-                  id="level-advanced"
-                  name="level"
-                  value="advanced"
-                />
+              <div class="filter__options">
+                <div class="radio">
+                  <input
+                    type="radio"
+                    id="level-all"
+                    name="level"
+                    value="all"
+                    checked
+                  />
+                  <label for="level-all"> 전체 </label>
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    id="level-basic"
+                    name="level"
+                    value="basic"
+                  />
+                  <label for="level-basic"> 기본 </label>
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    id="level-advanced"
+                    name="level"
+                    value="advanced"
+                  />
+                  <label for="level-advanced"> 심화 </label>
+                </div>
               </div>
             </fieldset>
 
             <fieldset>
               <legend>정렬 select</legend>
-              <div class="select">
-                <label for="select-sort"> 정렬 </label>
-                <select id="select-sort" name="sort">
-                  <option value="latest">최신순</option>
-                  <option value="name">이름순</option>
-                  <option value="level">난이도순</option>
-                </select>
+              <div class="filter__options">
+                <div class="select">
+                  <label for="select-sort"> 정렬 </label>
+                  <select id="select-sort" name="sort">
+                    <option value="latest">최신순</option>
+                    <option value="name">이름순</option>
+                    <option value="level">난이도순</option>
+                  </select>
+                </div>
               </div>
             </fieldset>
-            <button type="reset">초기화</button>
+            <button type="reset" class="filter__reset">초기화</button>
           </form>
         </div>
       </section>
       <section class="filter-result" aria-labelledby="filter-result-title">
-        <h2 id="filter-result-title">결과 목록</h2>
+        <h2 id="filter-result-title" class="filter-result__title">결과 목록</h2>
         <p class="filter-result__count">총 3개 결과</p>
         <ul class="result-list">
           <li
@@ -113,8 +118,8 @@
                 CSS Grid와 카드 컴포넌트 구조를 연습하는 예제입니다.
               </p>
               <ul class="result__tags">
-                <li>HTML</li>
-                <li>CSS</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
               </ul>
               <span class="result__level">기본</span>
             </article>
@@ -130,8 +135,8 @@
                 탭 UI 구조를 연습하는 예제입니다.
               </p>
               <ul class="result__tags">
-                <li>HTML</li>
-                <li>JavaScript</li>
+                <li class="tag">HTML</li>
+                <li class="tag">JavaScript</li>
               </ul>
               <span class="result__level">심화</span>
             </article>
@@ -147,9 +152,9 @@
                 아코디언 FAQ 구조를 연습하는 예제입니다.
               </p>
               <ul class="result__tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
               </ul>
               <span class="result__level">기본</span>
             </article>

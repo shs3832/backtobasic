@@ -97,7 +97,15 @@ backtobasic/
 │     ├─ scss/
 │     ├─ css/
 │     └─ js/
-└─ accordion-ui/
+├─ accordion-ui/
+│  └─ study/
+│     ├─ goal.md
+│     ├─ study-summary.md
+│     ├─ index.html
+│     ├─ scss/
+│     ├─ css/
+│     └─ js/
+└─ filter-ui/
    └─ study/
       ├─ goal.md
       ├─ study-summary.md
@@ -119,6 +127,7 @@ backtobasic/
 | tab-ui/study02 | 탭 UI - SCSS/CSS 스타일링 | 완료 | [study-summary.md](./tab-ui/study02/study-summary.md) |
 | tab-ui/study03 | 탭 UI - JavaScript 인터랙션 | 완료 | [study-summary.md](./tab-ui/study03/study-summary.md) |
 | accordion-ui/study | 아코디언 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accordion-ui/study/study-summary.md) |
+| filter-ui/study | 필터 UI - HTML/SCSS | 진행 중 | [study-summary.md](./filter-ui/study/study-summary.md) |
 
 ## Study 01 - 반응형 카드 리스트
 
@@ -258,8 +267,31 @@ FAQ 아코디언 UI의 HTML 구조, 카드형 SCSS 스타일, JavaScript 클릭 
 다음 단계:
 
 - 필터 UI 과제 시작
-- checkbox, radio, select와 label 연결 학습
-- 선택 조건에 따라 리스트를 필터링하는 JavaScript 흐름 연습
+
+## Filter UI Study - HTML/SCSS
+
+상품 리스트를 조건에 따라 필터링하는 UI의 HTML 구조와 SCSS 스타일을 작성했습니다.
+
+학습한 핵심 내용:
+
+- 필터 UI는 탭/아코디언보다 폼 UI에 가깝다는 점
+- `form`, `fieldset`, `legend`, `label`, `checkbox`, `radio`, `select`의 역할
+- checkbox는 복수 선택, radio는 같은 `name` 안에서 단일 선택이라는 기준
+- 결과 목록을 `ul/li`와 `article`로 구성하는 방식
+- vanilla JS 필터링을 대비해 `data-category`, `data-level`을 두는 방식
+- 필터 영역과 결과 영역을 역할에 따라 형제 section으로 분리하는 관점
+- 폼 요소의 브라우저 기본 UI를 유지하고 간격/정렬만 보완하는 방식
+- `focus-visible`을 input/select/button에 공통 적용하는 방식
+- `@media (hover: hover)`로 hover 가능한 환경에만 hover 스타일 적용
+- 결과 목록을 모바일 1열, 넓은 화면 2열로 구성하는 방식
+- `repeat(2, minmax(0, 1fr))`로 균등한 2열과 overflow 안정성을 확보하는 방식
+
+다음 단계:
+
+- 필터 UI JavaScript 인터랙션 구현
+- 선택된 checkbox/radio/select 값 읽기
+- `data-*` 속성 기준으로 결과 목록 필터링
+- 결과 개수와 빈 상태 메시지 갱신
 
 ## 앞으로 추가할 과제 후보
 
