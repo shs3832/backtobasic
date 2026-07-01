@@ -127,7 +127,7 @@ backtobasic/
 | tab-ui/study02 | 탭 UI - SCSS/CSS 스타일링 | 완료 | [study-summary.md](./tab-ui/study02/study-summary.md) |
 | tab-ui/study03 | 탭 UI - JavaScript 인터랙션 | 완료 | [study-summary.md](./tab-ui/study03/study-summary.md) |
 | accordion-ui/study | 아코디언 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accordion-ui/study/study-summary.md) |
-| filter-ui/study | 필터 UI - HTML/SCSS | 진행 중 | [study-summary.md](./filter-ui/study/study-summary.md) |
+| filter-ui/study | 필터 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./filter-ui/study/study-summary.md) |
 
 ## Study 01 - 반응형 카드 리스트
 
@@ -268,9 +268,9 @@ FAQ 아코디언 UI의 HTML 구조, 카드형 SCSS 스타일, JavaScript 클릭 
 
 - 필터 UI 과제 시작
 
-## Filter UI Study - HTML/SCSS
+## Filter UI Study - HTML/SCSS/JavaScript
 
-상품 리스트를 조건에 따라 필터링하는 UI의 HTML 구조와 SCSS 스타일을 작성했습니다.
+상품 리스트를 조건에 따라 필터링하는 UI의 HTML 구조, SCSS 스타일, vanilla JavaScript 인터랙션을 작성했습니다.
 
 학습한 핵심 내용:
 
@@ -285,13 +285,18 @@ FAQ 아코디언 UI의 HTML 구조, 카드형 SCSS 스타일, JavaScript 클릭 
 - `@media (hover: hover)`로 hover 가능한 환경에만 hover 스타일 적용
 - 결과 목록을 모바일 1열, 넓은 화면 2열로 구성하는 방식
 - `repeat(2, minmax(0, 1fr))`로 균등한 2열과 overflow 안정성을 확보하는 방식
+- `change` 이벤트로 checkbox/radio/select 값 변경 처리
+- 선택된 checkbox 값을 배열로 수집하는 방식
+- `data-category`, `data-level` 기준으로 결과 항목 필터링
+- 조건에 맞지 않는 결과를 `hidden`으로 제외하는 방식
+- 결과 개수 텍스트를 필터 결과와 동기화하는 방식
+- `reset` 이후 값을 다시 읽기 위해 실행 타이밍을 늦추는 방식
+- `sort`, `localeCompare("ko")`, 난이도 우선순위 객체로 정렬을 확장하는 방식
 
 다음 단계:
 
-- 필터 UI JavaScript 인터랙션 구현
-- 선택된 checkbox/radio/select 값 읽기
-- `data-*` 속성 기준으로 결과 목록 필터링
-- 결과 개수와 빈 상태 메시지 갱신
+- 접근성 중심의 Form Validation UI 또는 Modal Dialog 과제 진행
+- JavaScript 배열/정렬/필터링은 별도 기본기 과제로 복습
 
 ## 앞으로 추가할 과제 후보
 

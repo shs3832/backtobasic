@@ -154,6 +154,50 @@ hover 스타일은 실제 hover가 가능한 환경에서만 적용했다.
 
 `minmax(0, 1fr)`은 정해진 열 수 안에서 칸을 균등하게 나누되, 내부 콘텐츠 때문에 그리드가 밀리는 문제를 줄이기 위해 사용한다.
 
+## Part 3에서 볼 핵심
+
+필터 UI의 JavaScript는 접근성 관점에서 **선택된 조건에 따라 결과의 표시 상태와 개수 피드백을 동기화하는 역할**을 한다.
+
+```txt
+change 이벤트
+- checkbox / radio / select 값이 실제로 바뀌는 시점에 필터를 다시 적용
+
+reset 이벤트
+- form의 기본 초기화 동작이 끝난 뒤 결과 상태를 다시 계산
+- setTimeout으로 실행 타이밍을 한 번 늦춤
+
+hidden
+- 필터 조건에 맞지 않는 결과 항목을 현재 결과 목록에서 제외
+- CSS 클래스로만 숨기는 것보다 HTML 상태가 명확함
+
+결과 개수
+- 필터 적용 결과를 사용자가 바로 인지할 수 있는 피드백
+```
+
+이번 구현에서 사용한 주요 흐름은 다음과 같다.
+
+```txt
+1. form에서 선택된 checkbox 값을 배열로 수집
+2. 선택된 radio 값을 단일 값으로 읽음
+3. select의 정렬 값을 읽음
+4. 각 결과 카드의 data-category / data-level을 읽음
+5. some / includes로 카테고리 조건 비교
+6. data-level로 난이도 조건 비교
+7. 조건에 맞지 않는 항목은 hidden 처리
+8. 표시되는 항목 수를 세어 결과 개수 텍스트 갱신
+9. sort / localeCompare / 우선순위 객체로 정렬 확장
+```
+
+정렬 기능은 접근성 핵심이라기보다 JavaScript 기본기 확장에 가깝다. 특히 `map`, `some`, `includes`, `sort`, `localeCompare` 같은 배열/문자열 메서드는 별도 JS 연습 과제로 다시 복습할 필요가 있다.
+
+이번 JS 학습에서 느낀 점:
+
+```txt
+- 처음부터 함수를 잘게 나누면 구조는 깔끔하지만 학습 중에는 값의 흐름을 추적하기 어렵다.
+- 학습용 구현은 한 함수 안에서 먼저 흐름을 완성한 뒤, 동작을 확인하고 리팩토링하는 방식이 더 이해하기 쉽다.
+- 접근성 스터디의 목표와 JavaScript 로직 심화 목표를 구분해서 다룰 필요가 있다.
+```
+
 ## 면접에서 설명할 수 있는 문장
 
 > 필터 UI는 사용자가 조건을 선택하는 폼이기 때문에 `form`을 사용하고, 관련 있는 조건은 `fieldset`과 `legend`로 묶었습니다.
@@ -166,17 +210,43 @@ hover 스타일은 실제 hover가 가능한 환경에서만 적용했다.
 
 > radio는 같은 `name`을 가진 항목들이 하나의 그룹으로 동작하기 때문에 Tab 키로는 checked 된 항목에 진입하고, 그룹 내부 선택은 방향키로 이동하는 것이 일반적인 브라우저 동작입니다.
 
+> JavaScript는 선택된 조건을 읽고 결과 항목의 `data-*` 값과 비교한 뒤, 조건에 맞지 않는 항목을 `hidden`으로 제외하고 결과 개수를 갱신하는 역할로 사용했습니다.
+
+> 정렬은 제목 텍스트를 `localeCompare("ko")`로 비교하고, 난이도는 `basic`, `advanced`에 숫자 우선순위를 부여해 의도한 순서로 처리했습니다.
+
 ## 다음 단계 메모
 
-Part 3에서는 JavaScript로 필터 조건을 읽고 결과 목록을 갱신한다.
+접근성 중심의 필터 UI는 여기서 마무리한다.
 
-코드를 작성할 때는 다음 관점으로 검토한다.
+다음 접근성 스터디 후보:
 
 ```txt
-- 선택된 checkbox 값을 어떻게 수집할 것인가
-- 선택된 radio 값을 어떻게 읽을 것인가
-- data-category / data-level 기준으로 결과를 필터링할 수 있는가
-- 결과 개수를 필터 결과와 동기화할 수 있는가
-- reset 후 화면 상태도 함께 초기화되는가
-- 결과가 없을 때 빈 상태 메시지를 제공할 것인가
+- Form Validation UI
+  - aria-invalid
+  - aria-describedby
+  - 에러 메시지 연결
+  - submit 시 오류 안내
+
+- Modal Dialog
+  - role="dialog"
+  - aria-modal
+  - focus 이동
+  - ESC 닫기
+
+- Table UI
+  - caption
+  - th scope
+  - 정렬 가능한 컬럼
+  - 빈 상태
+```
+
+별도 JavaScript 복습 과제:
+
+```txt
+- NodeList와 Array 차이
+- Array.from / map
+- some / includes
+- sort / localeCompare
+- data-* 기반 필터링
+- 한 함수 안에서 구현 후 리팩토링하는 흐름
 ```
