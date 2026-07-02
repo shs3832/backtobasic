@@ -143,6 +143,67 @@ submit 버튼은 `type="submit"`으로 명시한다.
 - 초기 HTML에 aria-invalid를 미리 넣지 않았는가
 - submit 실패 시 첫 번째 오류 필드로 focus를 이동시킬 계획이 있는가
 
+## Part 2에서 볼 핵심
+
+폼 검증 UI의 스타일은 화려함보다 **입력 흐름, 필수 표시, 도움말, 에러 상태가 명확히 구분되는 것**이 중요하다.
+
+```txt
+입력 필드
+- 모바일 터치와 클릭 영역을 고려해 min-height: 44px 기준 사용
+- label, input, help, error의 수직 흐름을 명확히 구성
+
+필수 표시
+- label 근처에 작고 명확하게 표시
+- required 속성만으로 끝내지 않고 시각적으로도 안내
+
+도움말
+- 입력 전 알아야 하는 보조 정보
+- 본문보다 약한 색상으로 표현
+
+에러 메시지
+- input 근처에 표시
+- 빨간색을 사용하되 과하지 않게 텍스트/보더 중심으로 표현
+
+포커스
+- 키보드 사용자가 현재 위치를 알 수 있도록 focus-visible 제공
+```
+
+이번 스타일에서 기억할 접근성 패턴:
+
+```scss
+.form {
+  input:focus-visible,
+  select:focus-visible,
+  button:focus-visible {
+    outline: 3px solid $color-primary;
+    outline-offset: 3px;
+  }
+}
+```
+
+`outline`은 키보드 포커스가 어디 있는지 보여주고, `outline-offset`은 포커스 링을 요소 바깥으로 띄워 더 잘 보이게 한다.
+
+오류 상태는 나중에 JavaScript로 붙을 `aria-invalid="true"`를 기준으로 스타일링한다.
+
+```scss
+.form__input[aria-invalid="true"] {
+  border-color: $color-error;
+  background-color: $color-error-bg;
+}
+```
+
+이렇게 하면 보조기술에 전달되는 오류 상태와 시각적 오류 스타일의 기준을 맞출 수 있다.
+
+hover는 실제 hover가 가능한 환경에서만 적용한다.
+
+```scss
+@media (hover: hover) {
+  .form__submit:hover {
+    color: $color-primary;
+  }
+}
+```
+
 ## 면접에서 설명할 수 있는 문장
 
 > 에러 메시지는 사용자가 수정해야 할 입력 필드와 가까운 위치에 배치하고, `aria-describedby`로 input과 연결해 보조기술도 오류 내용을 함께 인식할 수 있도록 했습니다.
@@ -155,15 +216,21 @@ submit 버튼은 `type="submit"`으로 명시한다.
 
 > `aria-invalid`는 초기 상태에 넣지 않고, submit 이후 검증 실패가 확인된 필드에 동적으로 적용하는 것이 정확하다고 봤습니다.
 
+> 키보드 사용자가 현재 입력 위치를 놓치지 않도록 `focus-visible`에 `outline`과 `outline-offset`을 적용했습니다.
+
+> 오류 상태 스타일은 별도 클래스가 아니라 `aria-invalid="true"` 상태를 기준으로 잡아, 접근성 상태와 시각적 표현이 같은 기준을 보도록 했습니다.
+
 ## 다음 단계 메모
 
-다음 파트에서는 SCSS/CSS로 폼의 기본 시각 구조를 정리한다.
+다음 파트에서는 JavaScript로 폼 검증 로직을 작성한다.
 
 ```txt
-- form 전체 폭과 간격
-- label / input / 도움말 / 에러 메시지 위계
-- 필수 표시 스타일
-- checkbox 그룹 정렬
-- focus-visible
-- 오류 상태 스타일
+- submit 이벤트 처리
+- required 필드 값 검증
+- email 형식 검증
+- password 8자 이상 검증
+- interest checkbox 최소 1개 선택 검증
+- 에러 메시지 표시
+- aria-invalid 갱신
+- 첫 번째 오류 필드로 focus 이동
 ```

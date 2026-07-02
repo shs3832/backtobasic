@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation UI 연습</title>
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <main>
@@ -61,47 +62,52 @@
                 required
                 aria-describedby="password-help user-password-error"
               />
-              <p id="password-help">8자 이상 입력해주세요.</p>
+              <p id="password-help" class="form__help">
+                8자 이상 입력해주세요.
+              </p>
               <p id="user-password-error" class="form__error"></p>
             </div>
           </fieldset>
+          <hr />
           <fieldset aria-describedby="interest-error">
             <legend>관심분야</legend>
-            <div class="form__block">
-              <input
-                type="checkbox"
-                class="form__checkbox"
-                name="interest"
-                value="html"
-                id="checkbox-html"
-              />
-              <label for="checkbox-html" class="form__label">HTML</label>
-            </div>
-            <div class="form__block">
-              <input
-                type="checkbox"
-                class="form__checkbox"
-                name="interest"
-                value="css"
-                id="checkbox-css"
-              />
-              <label for="checkbox-css" class="form__label">CSS</label>
-            </div>
-            <div class="form__block">
-              <input
-                type="checkbox"
-                class="form__checkbox"
-                name="interest"
-                value="javascript"
-                id="checkbox-javascript"
-              />
-              <label for="checkbox-javascript" class="form__label"
-                >JavaScript</label
-              >
+            <div class="form__row">
+              <div class="form__block">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="interest"
+                  value="html"
+                  id="checkbox-html"
+                />
+                <label for="checkbox-html" class="form__label">HTML</label>
+              </div>
+              <div class="form__block">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="interest"
+                  value="css"
+                  id="checkbox-css"
+                />
+                <label for="checkbox-css" class="form__label">CSS</label>
+              </div>
+              <div class="form__block">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="interest"
+                  value="javascript"
+                  id="checkbox-javascript"
+                />
+                <label for="checkbox-javascript" class="form__label"
+                  >JavaScript</label
+                >
+              </div>
             </div>
             <p id="interest-error" class="form__error"></p>
           </fieldset>
-          <button type="submit">가입하기</button>
+          <button type="submit" class="form__submit">가입하기</button>
         </form>
       </section>
     </main>
