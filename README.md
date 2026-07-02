@@ -105,14 +105,19 @@ backtobasic/
 │     ├─ scss/
 │     ├─ css/
 │     └─ js/
-└─ filter-ui/
+├─ filter-ui/
+│  └─ study/
+│     ├─ goal.md
+│     ├─ study-summary.md
+│     ├─ index.html
+│     ├─ scss/
+│     ├─ css/
+│     └─ js/
+└─ form-validation-ui/
    └─ study/
       ├─ goal.md
       ├─ study-summary.md
-      ├─ index.html
-      ├─ scss/
-      ├─ css/
-      └─ js/
+      └─ index.html
 ```
 
 ## 스터디 목록
@@ -128,6 +133,7 @@ backtobasic/
 | tab-ui/study03 | 탭 UI - JavaScript 인터랙션 | 완료 | [study-summary.md](./tab-ui/study03/study-summary.md) |
 | accordion-ui/study | 아코디언 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accordion-ui/study/study-summary.md) |
 | filter-ui/study | 필터 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./filter-ui/study/study-summary.md) |
+| form-validation-ui/study | 폼 검증 UI - HTML 마크업 | 진행 중 | [study-summary.md](./form-validation-ui/study/study-summary.md) |
 
 ## Study 01 - 반응형 카드 리스트
 
@@ -297,6 +303,25 @@ FAQ 아코디언 UI의 HTML 구조, 카드형 SCSS 스타일, JavaScript 클릭 
 
 - 접근성 중심의 Form Validation UI 또는 Modal Dialog 과제 진행
 - JavaScript 배열/정렬/필터링은 별도 기본기 과제로 복습
+
+## Form Validation UI Study - HTML 마크업
+
+회원 정보 입력 폼의 HTML 구조를 작성하고, 오류 안내를 접근성 관점에서 연결하는 방식을 정리했습니다.
+
+학습한 핵심 내용:
+
+- `label`은 input의 이름, `aria-describedby`는 도움말/에러 메시지 같은 추가 설명이라는 구분
+- 필수 입력 필드는 `required`와 시각적 필수 텍스트를 함께 제공하는 방식
+- 비밀번호 도움말과 에러 메시지를 하나의 input에 함께 연결하는 방식
+- checkbox 그룹을 `fieldset`과 `legend`로 묶는 이유
+- 그룹 단위 오류를 특정 checkbox가 아니라 `fieldset`에 연결하는 방식
+- `aria-invalid`는 초기 HTML이 아니라 검증 실패 이후 JavaScript로 적용하는 것이 적절하다는 판단
+- submit 실패 시 첫 번째 오류 필드로 focus를 이동시키는 접근성 관점
+
+다음 단계:
+
+- 폼 검증 UI SCSS/CSS 스타일링
+- 도움말, 에러 메시지, 필수 표시, focus-visible 스타일 정리
 
 ## 앞으로 추가할 과제 후보
 
