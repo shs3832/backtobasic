@@ -135,7 +135,7 @@ backtobasic/
 | tab-ui/study03 | 탭 UI - JavaScript 인터랙션 | 완료 | [study-summary.md](./tab-ui/study03/study-summary.md) |
 | accordion-ui/study | 아코디언 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accordion-ui/study/study-summary.md) |
 | filter-ui/study | 필터 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./filter-ui/study/study-summary.md) |
-| form-validation-ui/study | 폼 검증 UI - HTML/SCSS | 진행 중 | [study-summary.md](./form-validation-ui/study/study-summary.md) |
+| form-validation-ui/study | 폼 검증 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./form-validation-ui/study/study-summary.md) |
 
 ## Study 01 - 반응형 카드 리스트
 
@@ -306,9 +306,9 @@ FAQ 아코디언 UI의 HTML 구조, 카드형 SCSS 스타일, JavaScript 클릭 
 - 접근성 중심의 Form Validation UI 또는 Modal Dialog 과제 진행
 - JavaScript 배열/정렬/필터링은 별도 기본기 과제로 복습
 
-## Form Validation UI Study - HTML/SCSS
+## Form Validation UI Study - HTML/SCSS/JavaScript
 
-회원 정보 입력 폼의 HTML 구조와 SCSS 스타일을 작성하고, 오류 안내를 접근성 관점에서 연결하는 방식을 정리했습니다.
+회원 정보 입력 폼의 HTML 구조, SCSS 스타일, JavaScript 검증 흐름을 작성하고, 오류 안내를 접근성 관점에서 연결하는 방식을 정리했습니다.
 
 학습한 핵심 내용:
 
@@ -323,11 +323,16 @@ FAQ 아코디언 UI의 HTML 구조, 카드형 SCSS 스타일, JavaScript 클릭 
 - `focus-visible`에 `outline`과 `outline-offset`을 적용하는 방식
 - `aria-invalid="true"`를 기준으로 오류 상태 스타일을 연결하는 방식
 - `@media (hover: hover)`로 hover 가능한 환경에만 hover 스타일을 적용하는 방식
+- `novalidate`로 브라우저 기본 검증 UI를 끄고 submit 시점에 직접 검증하는 방식
+- `type="email"`과 `validity.valid`를 함께 사용해 이메일 형식 검증을 처리하는 방식
+- 검증 전 기존 에러 메시지와 `aria-invalid`를 초기화하는 방식
+- 첫 번째 오류 필드로 `focus()`를 이동시켜 수정 흐름을 짧게 만드는 방식
+- checkbox 그룹은 개별 필드가 아니라 그룹 조건으로 검증하는 방식
 
 다음 단계:
 
-- 폼 검증 UI JavaScript 검증 구현
-- 에러 메시지 표시, aria-invalid 갱신, 첫 번째 오류 필드 focus 이동
+- 접근성 기본기 마지막 과제로 모달 UI 진행
+- 모달 UI 이후 접근성 전체 회고 정리
 
 ## 앞으로 추가할 과제 후보
 
