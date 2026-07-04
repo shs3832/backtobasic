@@ -51,83 +51,25 @@ Part 6. 리뷰, 면접 답변, React 전환 관점 정리
 ```txt
 backtobasic/
 ├─ README.md
-├─ study01/
-│  ├─ goal.md
-│  ├─ study-summary.md
-│  └─ responsive-card-list/
-│     └─ index.html
-├─ study02/
-│  ├─ goal.md
-│  ├─ study-summary.md
-│  └─ responsive-card-list/
-│     ├─ index.html
-│     ├─ scss/
-│     └─ css/
-├─ study03/
-│  ├─ goal.md
-│  ├─ study-summary.md
-│  └─ responsive-card-list/
-│     ├─ index.html
-│     ├─ scss/
-│     ├─ css/
-│     └─ js/
-├─ study04/
-│  ├─ goal.md
-│  ├─ study-summary.md
-│  └─ responsive-card-list/
-│     ├─ index.html
-│     ├─ scss/
-│     ├─ css/
-│     └─ js/
-├─ tab-ui/
-│  ├─ study01/
-│  │  ├─ goal.md
-│  │  ├─ study-summary.md
-│  │  └─ index.html
-│  ├─ study02/
-│  │  ├─ goal.md
-│  │  ├─ study-summary.md
-│  │  ├─ index.html
-│  │  ├─ scss/
-│  │  └─ css/
-│  └─ study03/
-│     ├─ goal.md
-│     ├─ study-summary.md
-│     ├─ index.html
-│     ├─ scss/
-│     ├─ css/
-│     └─ js/
-├─ accordion-ui/
-│  └─ study/
-│     ├─ goal.md
-│     ├─ study-summary.md
-│     ├─ index.html
-│     ├─ scss/
-│     ├─ css/
-│     └─ js/
-├─ filter-ui/
-│  └─ study/
-│     ├─ goal.md
-│     ├─ study-summary.md
-│     ├─ index.html
-│     ├─ scss/
-│     ├─ css/
-│     └─ js/
-├─ form-validation-ui/
-│  └─ study/
-│     ├─ goal.md
-│     ├─ study-summary.md
-│     ├─ index.html
-│     ├─ scss/
-│     ├─ css/
-│     └─ js/
-├─ modal-ui/
-│  └─ study/
-│     ├─ study-summary.md
-│     ├─ index.html
-│     ├─ scss/
-│     ├─ css/
-│     └─ js/
+├─ accessibility-ui/
+│  ├─ accessibility-review.md
+│  ├─ responsive-card-list/
+│  │  ├─ study01/
+│  │  ├─ study02/
+│  │  ├─ study03/
+│  │  └─ study04/
+│  ├─ tab-ui/
+│  │  ├─ study01/
+│  │  ├─ study02/
+│  │  └─ study03/
+│  ├─ accordion-ui/
+│  │  └─ study/
+│  ├─ filter-ui/
+│  │  └─ study/
+│  ├─ form-validation-ui/
+│  │  └─ study/
+│  └─ modal-ui/
+│     └─ study/
 └─ operational-ui/
    └─ study-plan.md
 ```
@@ -136,23 +78,23 @@ backtobasic/
 
 | Study | 주제 | 상태 | 정리 |
 | --- | --- | --- | --- |
-| study01 | 반응형 카드 리스트 - HTML 마크업 | 완료 | [study-summary.md](./study01/study-summary.md) |
-| study02 | 반응형 카드 리스트 - SCSS/CSS | 완료 | [study-summary.md](./study02/study-summary.md) |
-| study03 | 반응형 카드 리스트 - JavaScript 인터랙션 | 완료 | [study-summary.md](./study03/study-summary.md) |
-| study04 | 반응형 카드 리스트 - 최종 리뷰 | 완료 | [study-summary.md](./study04/study-summary.md) |
-| tab-ui/study01 | 탭 UI - HTML 마크업 | 완료 | [study-summary.md](./tab-ui/study01/study-summary.md) |
-| tab-ui/study02 | 탭 UI - SCSS/CSS 스타일링 | 완료 | [study-summary.md](./tab-ui/study02/study-summary.md) |
-| tab-ui/study03 | 탭 UI - JavaScript 인터랙션 | 완료 | [study-summary.md](./tab-ui/study03/study-summary.md) |
-| accordion-ui/study | 아코디언 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accordion-ui/study/study-summary.md) |
-| filter-ui/study | 필터 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./filter-ui/study/study-summary.md) |
-| form-validation-ui/study | 폼 검증 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./form-validation-ui/study/study-summary.md) |
-| modal-ui/study | 모달 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./modal-ui/study/study-summary.md) |
+| study01 | 반응형 카드 리스트 - HTML 마크업 | 완료 | [study-summary.md](./accessibility-ui/responsive-card-list/study01/study-summary.md) |
+| study02 | 반응형 카드 리스트 - SCSS/CSS | 완료 | [study-summary.md](./accessibility-ui/responsive-card-list/study02/study-summary.md) |
+| study03 | 반응형 카드 리스트 - JavaScript 인터랙션 | 완료 | [study-summary.md](./accessibility-ui/responsive-card-list/study03/study-summary.md) |
+| study04 | 반응형 카드 리스트 - 최종 리뷰 | 완료 | [study-summary.md](./accessibility-ui/responsive-card-list/study04/study-summary.md) |
+| tab-ui/study01 | 탭 UI - HTML 마크업 | 완료 | [study-summary.md](./accessibility-ui/tab-ui/study01/study-summary.md) |
+| tab-ui/study02 | 탭 UI - SCSS/CSS 스타일링 | 완료 | [study-summary.md](./accessibility-ui/tab-ui/study02/study-summary.md) |
+| tab-ui/study03 | 탭 UI - JavaScript 인터랙션 | 완료 | [study-summary.md](./accessibility-ui/tab-ui/study03/study-summary.md) |
+| accordion-ui/study | 아코디언 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accessibility-ui/accordion-ui/study/study-summary.md) |
+| filter-ui/study | 필터 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accessibility-ui/filter-ui/study/study-summary.md) |
+| form-validation-ui/study | 폼 검증 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accessibility-ui/form-validation-ui/study/study-summary.md) |
+| modal-ui/study | 모달 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accessibility-ui/modal-ui/study/study-summary.md) |
 
 ## 접근성 기본기 1회독 회고
 
 접근성관련된 속성과 흐름을 스터디했습니다. 완벽하진않지만 접근성의 개념에대해 익혔고 ai를 활용해 좀 더 유저 친화적인 화면을 만들수있는 스터디였습니다.
 
-전체 회고는 [accessibility-review.md](./accessibility-review.md)에 정리했습니다.
+전체 회고는 [accessibility-review.md](./accessibility-ui/accessibility-review.md)에 정리했습니다.
 
 ## 다음 단계 - 운영 UI 개발 패턴
 
