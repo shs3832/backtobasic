@@ -121,13 +121,15 @@ backtobasic/
 │     ├─ scss/
 │     ├─ css/
 │     └─ js/
-└─ modal-ui/
-   └─ study/
-      ├─ study-summary.md
-      ├─ index.html
-      ├─ scss/
-      ├─ css/
-      └─ js/
+├─ modal-ui/
+│  └─ study/
+│     ├─ study-summary.md
+│     ├─ index.html
+│     ├─ scss/
+│     ├─ css/
+│     └─ js/
+└─ operational-ui/
+   └─ study-plan.md
 ```
 
 ## 스터디 목록
@@ -145,6 +147,30 @@ backtobasic/
 | filter-ui/study | 필터 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./filter-ui/study/study-summary.md) |
 | form-validation-ui/study | 폼 검증 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./form-validation-ui/study/study-summary.md) |
 | modal-ui/study | 모달 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./modal-ui/study/study-summary.md) |
+
+## 접근성 기본기 1회독 회고
+
+접근성관련된 속성과 흐름을 스터디했습니다. 완벽하진않지만 접근성의 개념에대해 익혔고 ai를 활용해 좀 더 유저 친화적인 화면을 만들수있는 스터디였습니다.
+
+전체 회고는 [accessibility-review.md](./accessibility-review.md)에 정리했습니다.
+
+## 다음 단계 - 운영 UI 개발 패턴
+
+접근성 기본기 1회독 이후에는 운영/관리자 화면에서 자주 사용하는 UI 패턴을 학습합니다.
+
+스터디 계획은 [operational-ui/study-plan.md](./operational-ui/study-plan.md)에 정리했습니다.
+
+진행 예정 순서:
+
+```txt
+1. Table UI
+2. Pagination UI
+3. Dropdown / Action Menu UI
+4. Toast / Notification UI
+5. Admin List UI
+```
+
+운영 UI 개발 패턴에서는 데이터를 안정적으로 보여주는 구조, 상태 표시, 반복 작업, 빈 상태/로딩/오류 상태, React 전환 관점을 함께 봅니다.
 
 ## Study 01 - 반응형 카드 리스트
 
