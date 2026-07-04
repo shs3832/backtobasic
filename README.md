@@ -113,13 +113,21 @@ backtobasic/
 │     ├─ scss/
 │     ├─ css/
 │     └─ js/
-└─ form-validation-ui/
+├─ form-validation-ui/
+│  └─ study/
+│     ├─ goal.md
+│     ├─ study-summary.md
+│     ├─ index.html
+│     ├─ scss/
+│     ├─ css/
+│     └─ js/
+└─ modal-ui/
    └─ study/
-      ├─ goal.md
       ├─ study-summary.md
       ├─ index.html
       ├─ scss/
-      └─ css/
+      ├─ css/
+      └─ js/
 ```
 
 ## 스터디 목록
@@ -136,6 +144,7 @@ backtobasic/
 | accordion-ui/study | 아코디언 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./accordion-ui/study/study-summary.md) |
 | filter-ui/study | 필터 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./filter-ui/study/study-summary.md) |
 | form-validation-ui/study | 폼 검증 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./form-validation-ui/study/study-summary.md) |
+| modal-ui/study | 모달 UI - HTML/SCSS/JavaScript | 완료 | [study-summary.md](./modal-ui/study/study-summary.md) |
 
 ## Study 01 - 반응형 카드 리스트
 
@@ -333,6 +342,30 @@ FAQ 아코디언 UI의 HTML 구조, 카드형 SCSS 스타일, JavaScript 클릭 
 
 - 접근성 기본기 마지막 과제로 모달 UI 진행
 - 모달 UI 이후 접근성 전체 회고 정리
+
+## Modal UI Study - HTML/SCSS/JavaScript
+
+삭제 확인 모달을 기준으로 HTML 구조, 중앙 정렬 스타일, 열기/닫기 JavaScript, focus trap을 구현했습니다.
+
+학습한 핵심 내용:
+
+- 모달 열기는 페이지 이동이 아니라 현재 화면의 UI 상태 변경이므로 `button`을 사용하는 방식
+- `role="dialog"`와 `aria-modal="true"`로 대화상자 역할과 모달 상태를 전달하는 방식
+- `aria-labelledby`, `aria-describedby`로 모달 제목과 설명을 연결하는 방식
+- 닫기 버튼의 `x`는 `aria-hidden="true"`로 감추고, `aria-label`로 버튼 목적을 제공하는 방식
+- 닫힌 모달을 `hidden`으로 감춰 화면과 보조기술 흐름에서 제외하는 방식
+- `position: fixed`, `inset: 0`, `z-index`로 화면 전체를 덮는 레이어를 만드는 방식
+- `display: grid`, `place-items: center`로 모달 박스를 중앙 정렬하는 방식
+- `width: min(100%, 420px)`로 데스크톱과 모바일 너비를 함께 대응하는 방식
+- 모달이 열릴 때 내부 버튼으로 focus를 이동하고, 닫힐 때 열기 버튼으로 focus를 복귀시키는 방식
+- ESC 키로 닫기 동작을 제공하는 방식
+- Tab / Shift + Tab 이동이 모달 내부에서 순환되도록 focus trap을 구현하는 방식
+- `tabindex`는 정상적인 HTML 구조에서는 대부분 필요하지 않고, JS로 비상호작용 요소에 focus를 보내야 할 때 제한적으로 사용하는 판단
+
+다음 단계:
+
+- 접근성 중심 UI 기본기 전체 회고
+- 이후 운영 UI 개발 패턴으로 확장
 
 ## 앞으로 추가할 과제 후보
 
