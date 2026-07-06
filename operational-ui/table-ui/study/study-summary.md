@@ -180,6 +180,80 @@ updateAriaSort(button)
 - 접근성 상태 갱신이라는 책임이 분명함
 ```
 
+## Part 4 리뷰
+
+이번 Table UI는 코딩보다 관점 정리가 중요한 파트로 마무리했다.
+
+```txt
+실무에서 먼저 깨질 수 있는 지점
+- 이메일, 식별자, 회사명, 로그 메시지처럼 길이를 예측하기 어려운 데이터 셀
+- 다국어 환경에서 같은 의미의 텍스트가 더 길어지는 경우
+- 액션 버튼이나 상태 배지가 반복되며 테이블보다 더 튀는 경우
+
+접근성에서 잘 챙긴 지점
+- caption으로 테이블 자체의 내용을 설명
+- th scope="col"로 컬럼 제목 제공
+- th scope="row"로 각 행의 대표값 제공
+- 정렬 동작은 button으로 제공
+- 정렬 결과와 aria-sort 상태를 함께 갱신
+
+아쉬운 지점
+- JavaScript 정렬 흐름은 아직 손에 완전히 익지는 않음
+- Array.from, sort, appendChild가 함께 쓰이는 구조는 반복 학습이 필요
+- 다만 DOM 요소를 배열화하고 tr 자체를 재배치한다는 흐름은 이해함
+```
+
+## React 전환 관점
+
+React로 옮기면 DOM을 직접 재배치하기보다 데이터와 상태를 기준으로 다시 렌더링한다.
+
+```txt
+state가 될 값
+- sortKey
+- sortDirection
+
+props 또는 state가 될 값
+- users
+
+계산값
+- sortedUsers
+- aValue / bValue 같은 정렬 비교용 임시 값
+
+컴포넌트로 나눌 수 있는 부분
+- UserTable
+- StatusBadge
+- TableActionButton
+- SortButton
+```
+
+vanilla JavaScript에서는 이미 그려진 DOM에서 `tr`을 읽고 다시 배치했다.
+
+```txt
+DOM -> tr 배열화 -> 정렬 -> appendChild로 재배치
+```
+
+React에서는 원본 데이터와 정렬 상태를 기준으로 정렬된 배열을 계산하고 다시 렌더링한다.
+
+```txt
+users + sortKey + sortDirection -> sortedUsers -> map 렌더링
+```
+
+## 다음 운영 UI 과제로 이어지는 부분
+
+다음 과제인 Pagination UI에서는 Table UI에서 배운 상태 관리와 접근성 상태 전달이 이어진다.
+
+```txt
+Table UI
+- aria-sort
+- 현재 정렬 기준과 방향을 전달
+
+Pagination UI
+- aria-current="page"
+- 현재 페이지 위치를 전달
+```
+
+운영 UI에서는 정렬, 페이지, 선택, 열림, 오류 같은 상태가 자주 바뀐다. 화면에 보이는 상태와 HTML/ARIA에 반영되는 상태를 함께 맞추는 감각이 중요하다.
+
 ## 면접에서 설명할 수 있는 문장
 
 > 테이블에서는 컬럼 제목은 `th scope="col"`로, 행을 대표하는 사용자 이름은 `th scope="row"`로 작성해 헤더와 데이터 셀의 관계를 명확히 했습니다.
@@ -190,6 +264,8 @@ updateAriaSort(button)
 
 > 정렬 후에는 화면 순서뿐 아니라 `aria-sort`도 갱신해 보조기술 사용자가 현재 정렬 기준과 방향을 알 수 있도록 했습니다.
 
+> React로 전환하면 `sortKey`와 `sortDirection`은 state로 관리하고, 정렬된 목록은 원본 데이터와 정렬 상태에서 파생되는 계산값으로 다루는 것이 자연스럽습니다.
+
 ## 다음 단계
 
-Part 4에서는 Table UI를 리뷰하고 React 컴포넌트로 전환할 때 어떤 state와 props로 나눌 수 있는지 정리한다.
+다음 운영 UI 과제는 Pagination UI다.
