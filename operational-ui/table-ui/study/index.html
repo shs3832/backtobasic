@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table UI 연습</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>운영 테이블 학습</h1>
+
+      <section class="table-section" aria-labelledby="table-title">
+        <h2 id="table-title" class="table-section__title">사용자 목록</h2>
+        <p class="table-section__description">
+          운영자가 사용자 상태와 권한을 확인하는 테이블 UI를 학습합니다.
+        </p>
+        <div class="table-container">
+          <table>
+            <caption>
+              사용자 이름, 이메일, 역할, 상태, 가입일과 관리 액션을 확인할 수
+              있는 사용자 목록
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col" aria-sort="none">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="name"
+                  >
+                    사용자
+                  </button>
+                </th>
+                <th scope="col">이메일</th>
+                <th scope="col">역할</th>
+                <th scope="col">상태</th>
+                <th scope="col" aria-sort="none">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="joinedAt"
+                  >
+                    가입일
+                  </button>
+                </th>
+                <th scope="col">관리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">김민지</th>
+                <td>minji@example.com</td>
+                <td>관리자</td>
+                <td>
+                  <span class="status-badge status-badge--active">활성</span>
+                </td>
+                <td>2026-06-12</td>
+                <td>
+                  <button type="button" class="table-action">상세</button>
+                  <button type="button" class="table-action">수정</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">이준호</th>
+                <td>junho@example.com</td>
+                <td>매니저</td>
+                <td>
+                  <span class="status-badge status-badge--active">활성</span>
+                </td>
+                <td>2026-06-20</td>
+                <td>
+                  <button type="button" class="table-action">상세</button>
+                  <button type="button" class="table-action">수정</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">박서연</th>
+                <td>seoyeon@example.com</td>
+                <td>일반 사용자</td>
+                <td>
+                  <span class="status-badge status-badge--inactive"
+                    >비활성</span
+                  >
+                </td>
+                <td>2026-06-25</td>
+                <td>
+                  <button type="button" class="table-action">상세</button>
+                  <button type="button" class="table-action">수정</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">최도윤</th>
+                <td>doyoon@example.com</td>
+                <td>일반 사용자</td>
+                <td>
+                  <span class="status-badge status-badge--pending">대기</span>
+                </td>
+                <td>2026-07-01</td>
+                <td>
+                  <button type="button" class="table-action">상세</button>
+                  <button type="button" class="table-action">수정</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">정하린</th>
+                <td>harin@example.com</td>
+                <td>매니저</td>
+                <td>
+                  <span class="status-badge status-badge--active">활성</span>
+                </td>
+                <td>2026-07-03</td>
+                <td>
+                  <button type="button" class="table-action">상세</button>
+                  <button type="button" class="table-action">수정</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
