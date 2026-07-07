@@ -1,0 +1,85 @@
+@use "variables" as *;
+
+body {
+  background-color: $color-background;
+  color: $color-text;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.pagination-section {
+  margin-top: 32px;
+}
+
+.pagination-section__title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.pagination-section__description {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-muted;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pagination__count {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-muted;
+}
+
+.pagination__total,
+.pagination__current {
+  font-weight: bold;
+}
+
+.pagination__buttons {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.pagination__numbers {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.pagination button {
+  border: 1px solid $color-border;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: $color-surface;
+  cursor: pointer;
+}
+
+.pagination button[aria-current="page"] {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}

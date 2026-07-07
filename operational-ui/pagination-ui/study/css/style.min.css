@@ -1,0 +1,113 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.pagination-section {
+  margin-top: 32px;
+}
+
+.pagination-section__title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.pagination-section__description {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 24px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pagination__count {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6b7280;
+}
+
+.pagination__total,
+.pagination__current {
+  font-weight: bold;
+}
+
+.pagination__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 8px;
+}
+
+.pagination__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 8px;
+}
+
+.pagination button {
+  border: 1px solid #d1d5db;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.pagination button[aria-current=page] {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}/*# sourceMappingURL=style.min.css.map */

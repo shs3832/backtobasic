@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination UI 연습</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>페이지네이션 학습</h1>
+
+      <section class="pagination-section" aria-labelledby="pagination-title">
+        <h2 id="pagination-title" class="pagination-section__title">
+          사용자 목록 페이지 이동
+        </h2>
+        <p class="pagination-section__description">
+          운영자가 목록 데이터의 현재 위치와 이동 가능한 페이지를 확인하는
+          Pagination UI를 학습합니다.
+        </p>
+
+        <div class="pagination">
+          <p class="pagination__count">
+            총 <span class="pagination__total">128</span>명 중
+            <span class="pagination__current">1-10</span>명 표시
+          </p>
+          <nav class="pagination__buttons" aria-label="페이지네이션">
+            <button type="button" disabled class="pagination__prev">
+              이전
+            </button>
+            <div class="pagination__numbers">
+              <button type="button" aria-current="page">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <button type="button">4</button>
+              <button type="button">5</button>
+            </div>
+            <button type="button" class="pagination__next">다음</button>
+          </nav>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
