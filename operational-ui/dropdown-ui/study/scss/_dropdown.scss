@@ -1,0 +1,83 @@
+@use "variables" as *;
+
+body {
+  background-color: $color-background;
+  color: $color-text;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.dropdown-section {
+  margin-top: 32px;
+}
+
+.dropdown-section__title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.dropdown-section__description {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-muted;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.dropdown__trigger {
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  background-color: $color-surface;
+  cursor: pointer;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 200px;
+  padding: 8px;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  background-color: $color-surface;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
+  z-index: 10;
+}
+
+.dropdown__item {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown__trigger:focus-visible,
+.dropdown__item:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dropdown__trigger:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+
+  .dropdown__item:hover {
+    background-color: $color-background;
+  }
+}
