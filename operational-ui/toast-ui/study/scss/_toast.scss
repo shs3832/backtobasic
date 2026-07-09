@@ -1,0 +1,107 @@
+@use "variables" as *;
+
+body {
+  background-color: $color-background;
+  color: $color-text;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.toast-section {
+  margin-top: 32px;
+}
+
+.toast-section__title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.toast-section__description {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-muted;
+}
+
+.toast {
+  margin-top: 20px;
+
+  &__button {
+    min-height: 40px;
+    padding: 0 12px;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    background-color: $color-surface;
+    cursor: pointer;
+  }
+
+  &__item {
+    padding: 12px;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    background-color: $color-surface;
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
+
+    &--success {
+      border-left: 4px solid $color-success;
+    }
+
+    &--error {
+      border-left: 4px solid $color-danger;
+    }
+  }
+
+  &__status {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__message {
+    margin: 4px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+  }
+  &__regions {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    display: grid;
+    gap: 8px;
+    width: min(360px, 100vw - 48px);
+  }
+
+  &__region {
+    display: grid;
+    gap: 8px;
+  }
+
+  &__close {
+    margin-top: 8px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: $color-muted;
+    cursor: pointer;
+  }
+
+  &__button:focus-visible,
+  &__close:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .toast__button:hover,
+  .toast__close:hover {
+    color: $color-primary;
+  }
+}
